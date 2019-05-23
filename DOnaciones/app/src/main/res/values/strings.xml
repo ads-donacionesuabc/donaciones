@@ -3,4 +3,6 @@
     <string name="title_Donaciones">Donaciones</string>
     <string name="title_Busqueda">Busqueda</string>
     <string name="title_Cuenta">Cuenta</string>
+    <string name="title_activity_busqueda">busqueda</string>
+    <string name="title_activity_donaciones">Donaciones</string>
 </resources>

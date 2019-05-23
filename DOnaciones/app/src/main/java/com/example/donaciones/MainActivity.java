@@ -1,15 +1,22 @@
 package com.example.donaciones;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mTextMessage;
+
+    public void siguiente(View view){
+        Intent next = new Intent(this, ventana2.class);
+        startActivity(next);
+    }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -18,10 +25,14 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_Donaciones:
+                    Intent intent = new Intent(MainActivity.this, Donaciones.class);
+                    startActivity(intent);
                     mTextMessage.setText("Donaciones");
                     return true;
                 case R.id.navigation_Buscar:
-                    mTextMessage.setText("Buscar");
+                    Intent intent1 = new Intent(MainActivity.this, busqueda.class);
+                    startActivity(intent1);
+                    //mTextMessage.setText("Buscar");
                     return true;
                 case R.id.navigation_Cuenta:
                     mTextMessage.setText("Cuenta");
@@ -40,5 +51,7 @@ public class MainActivity extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navView.setBackgroundColor(Color.parseColor("#009933"));
     }
+
+
 
 }

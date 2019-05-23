@@ -23,10 +23,9 @@
         android:id="@+id/nav_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
@@ -37,6 +36,17 @@
         android:layout_height="135dp"
         app:srcCompat="@mipmap/ic_launcher_foreground"
         tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="77dp" />
+        tools:layout_editor_absoluteY="77dp"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="siguiente"
+        android:text="Siguiente"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="646dp"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

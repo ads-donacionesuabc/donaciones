@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Donaciones"
+            android:label="@string/title_activity_donaciones"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".busqueda"
+            android:label="@string/title_activity_busqueda"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ventana2" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
