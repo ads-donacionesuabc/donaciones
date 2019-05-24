@@ -30,12 +30,14 @@ public class MainActivity extends AppCompatActivity {
                     mTextMessage.setText("Donaciones");
                     return true;
                 case R.id.navigation_Buscar:
-                    Intent intent1 = new Intent(MainActivity.this, busqueda.class);
+                    Intent intent1 = new Intent(MainActivity.this, Busqueda.class);
                     startActivity(intent1);
                     //mTextMessage.setText("Buscar");
                     return true;
                 case R.id.navigation_Cuenta:
-                    mTextMessage.setText("Cuenta");
+                    //mTextMessage.setText("Cuenta");
+                    Intent intent2 = new Intent(MainActivity.this, Cuenta.class);
+                    startActivity(intent2);
                     return true;
             }
             return false;

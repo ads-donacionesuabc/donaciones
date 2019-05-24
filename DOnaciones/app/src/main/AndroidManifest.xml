@@ -14,9 +14,25 @@
             android:label="@string/title_activity_donaciones"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".busqueda"
+            android:name=".Busqueda"
             android:label="@string/title_activity_busqueda"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".Cuenta"
+            android:label="Cuenta"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".AcercaDe"
+            android:label="AcercaDe"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".Sugerencias"
+            android:label="Sugerencias"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".Preguntas"
+            android:label="Preguntas"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
         <activity android:name=".ventana2" />
         <activity
             android:name=".MainActivity"

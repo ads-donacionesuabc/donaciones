@@ -8,7 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class Donaciones extends AppCompatActivity {
+public class Busqueda extends AppCompatActivity {
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -17,16 +18,17 @@ public class Donaciones extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_Donaciones:
-                    Intent intent = new Intent(Donaciones.this, Donaciones.class);
+                    Intent intent = new Intent(Busqueda.this, Donaciones.class);
                     startActivity(intent);
                     return true;
                 case R.id.navigation_Buscar:
-                    Intent intent1 = new Intent(Donaciones.this, Busqueda.class);
+                    Intent intent1 = new Intent(Busqueda.this, Busqueda.class);
                     startActivity(intent1);
                     //mTextMessage.setText("Buscar");
                     return true;
                 case R.id.navigation_Cuenta:
-                    Intent intent2 = new Intent(Donaciones.this, Cuenta.class);
+                    //mTextMessage.setText("Cuenta");
+                    Intent intent2 = new Intent(Busqueda.this, Cuenta.class);
                     startActivity(intent2);
                     return true;
             }
@@ -37,7 +39,7 @@ public class Donaciones extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_donaciones);
+        setContentView(R.layout.activity_busqueda);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         BottomNavigationView navView = findViewById(R.id.nav_view);
