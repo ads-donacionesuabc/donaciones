@@ -20,7 +20,7 @@ public class Donaciones extends AppCompatActivity {
                     Intent intent = new Intent(Donaciones.this, Donaciones.class);
                     startActivity(intent);
                     return true;
-                case R.id.navigation_Buscar:
+                case R.id.navigation_Busqueda:
                     Intent intent1 = new Intent(Donaciones.this, Busqueda.class);
                     startActivity(intent1);
                     //mTextMessage.setText("Buscar");

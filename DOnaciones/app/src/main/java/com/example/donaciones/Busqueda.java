@@ -21,7 +21,7 @@ public class Busqueda extends AppCompatActivity {
                     Intent intent = new Intent(Busqueda.this, Donaciones.class);
                     startActivity(intent);
                     return true;
-                case R.id.navigation_Buscar:
+                case R.id.navigation_Busqueda:
                     Intent intent1 = new Intent(Busqueda.this, Busqueda.class);
                     startActivity(intent1);
                     //mTextMessage.setText("Buscar");
