@@ -34,6 +34,8 @@
             android:label="Preguntas"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
 
+
+
         <activity
             android:name=".InicioSesion"
             android:label="InicioSesion"
@@ -47,6 +49,10 @@
         <activity
             android:name=".RegistroExitoso"
             android:label="RegistroExitoso"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".AgregarDonacion"
+            android:label="AgregarDonacion"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
 
         <activity

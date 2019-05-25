@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Donaciones extends AppCompatActivity {
 
@@ -44,6 +45,11 @@ public class Donaciones extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
+    }
+
+    public void agregardonacion(View view){
+        Intent next = new Intent(this, AgregarDonacion.class);
+        startActivity(next);
     }
 
 }
