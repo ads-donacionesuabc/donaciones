@@ -11,7 +11,8 @@
         android:layout_height="715dp"
         android:background="@color/colorPrimaryDark"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,6 +37,7 @@
                 android:layout_height="76dp">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/inputText1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </android.support.design.widget.TextInputLayout>
@@ -51,6 +53,7 @@
                 android:layout_height="69dp">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/inputText2"
                     android:layout_width="match_parent"
                     android:layout_height="36dp" />
             </android.support.design.widget.TextInputLayout>
@@ -66,6 +69,7 @@
                 android:layout_height="wrap_content">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/inputText3"
                     android:layout_width="match_parent"
                     android:layout_height="33dp" />
             </android.support.design.widget.TextInputLayout>
@@ -77,7 +81,7 @@
                 android:text="Contraseña" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/inputTex4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -109,7 +113,7 @@
                     android:layout_marginLeft="200dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:onClick="registrar"
+                    android:onClick="onClick"
                     android:text="Enviar" />
 
             </LinearLayout>

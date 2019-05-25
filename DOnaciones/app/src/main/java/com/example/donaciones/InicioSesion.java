@@ -11,6 +11,7 @@ public class InicioSesion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio_sesion);
+
     }
     public void siguiente(View view){
         Intent next = new Intent(this, Donaciones.class);
