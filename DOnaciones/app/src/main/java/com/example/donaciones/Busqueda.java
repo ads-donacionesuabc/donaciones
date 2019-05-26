@@ -20,16 +20,19 @@ public class Busqueda extends AppCompatActivity {
                 case R.id.navigation_Donaciones:
                     Intent intent = new Intent(Busqueda.this, Donaciones.class);
                     startActivity(intent);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.navigation_Busqueda:
                     Intent intent1 = new Intent(Busqueda.this, Busqueda.class);
                     startActivity(intent1);
+                    overridePendingTransition(0, 0);
                     //mTextMessage.setText("Buscar");
                     return true;
                 case R.id.navigation_Cuenta:
                     //mTextMessage.setText("Cuenta");
                     Intent intent2 = new Intent(Busqueda.this, Cuenta.class);
                     startActivity(intent2);
+                    overridePendingTransition(0, 0);
                     return true;
             }
             return false;

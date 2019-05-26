@@ -21,14 +21,17 @@ public class Cuenta extends AppCompatActivity {
                 case R.id.navigation_Donaciones:
                     Intent intent = new Intent(Cuenta.this, Donaciones.class);
                     startActivity(intent);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.navigation_Busqueda:
                     Intent intent1 = new Intent(Cuenta.this, Busqueda.class);
                     startActivity(intent1);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.navigation_Cuenta:
                     Intent intent2 = new Intent(Cuenta.this, Cuenta.class);
                     startActivity(intent2);
+                    overridePendingTransition(0, 0);
                     return true;
             }
             return false;
