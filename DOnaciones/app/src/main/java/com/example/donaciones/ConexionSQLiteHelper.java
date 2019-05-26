@@ -13,6 +13,7 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
         super(context, name, factory, version);
     }
 
+
     //Metodo crea tablas
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -21,7 +22,7 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
     //Metodo verifica si ya hay version antigua de base de datos
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-    db.execSQL("drop table if exists usuarios ");
+    //db.execSQL("drop table if exists usuarios ");
     onCreate(db);
     }
 }

@@ -34,6 +34,8 @@ public class Registro extends AppCompatActivity {
 
     public void onClick(View view){
         registrarUsuario();
+        Intent next = new Intent(this, RegistroExitoso.class);
+        startActivity(next);
     }
     public void registrarUsuario(){
         ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this, "db",null,1);
@@ -44,7 +46,7 @@ public class Registro extends AppCompatActivity {
         values.put(Utilidades.telefono,input3.getText().toString());
         values.put(Utilidades.contrasena,edi.getText().toString());
 
-        Long idResult = db.insert(Utilidades.TABLA_USUARIO,Utilidades.nombre,values);
+        Long idResult = db.insert(Utilidades.tusuario,Utilidades.nombre,values);
         Toast.makeText(getApplicationContext(),"Nombre:"+idResult,Toast.LENGTH_SHORT).show();
     }
    // public void registrar(View view){
