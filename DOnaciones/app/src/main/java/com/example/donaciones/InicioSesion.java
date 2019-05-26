@@ -14,7 +14,7 @@ public class InicioSesion extends AppCompatActivity {
 
     }
     public void siguiente(View view){
-        Intent next = new Intent(this, Donaciones.class);
+        Intent next = new Intent(this, pantallaPrincipal.class);
         startActivity(next);
     }
 
