@@ -63,6 +63,11 @@
             android:label="Rifa"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
         <activity
+            android:name=".CategoriaLibros"
+            android:label="CategoriaLibros"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+
+        <activity
             android:name=".ConsultarResultadosRifa"
             android:label="ConsultarResultadosRifa"
             android:theme="@style/AppTheme.NoActionBar" ></activity>

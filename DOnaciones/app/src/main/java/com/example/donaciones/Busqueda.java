@@ -58,4 +58,11 @@ public class Busqueda extends AppCompatActivity {
         overridePendingTransition(0, 0);
     }
 
+    public void categoria_libros(View view){
+        Intent next = new Intent(this, CategoriaLibros.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
+    }
+
+
 }

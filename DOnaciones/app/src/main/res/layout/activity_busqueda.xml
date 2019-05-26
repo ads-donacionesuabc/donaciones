@@ -88,6 +88,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
                     android:background="@color/colorPrimary"
+                    android:onClick="categoria_libros"
                     app:srcCompat="@drawable/boton_libros"
                     tools:layout_conversion_absoluteHeight="105dp"
                     tools:layout_conversion_absoluteWidth="105dp" />
