@@ -4,21 +4,5 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AcercaDe">
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="395dp"
-        android:layout_height="715dp"
-        android:background="@color/colorPrimaryDark"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="363dp"
-            android:layout_height="650dp"
-            app:srcCompat="@drawable/pantalla_acercade"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="32dp" />
-    </android.support.constraint.ConstraintLayout>
-</android.support.constraint.ConstraintLayout>
+    android:background="@drawable/pantalla_acercade"
+    tools:context=".AcercaDe" />

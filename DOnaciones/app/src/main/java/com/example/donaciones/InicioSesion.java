@@ -13,7 +13,7 @@ import com.example.donaciones.utilidades.Utilidades;
 
 public class InicioSesion extends AppCompatActivity {
 
-    TextInputEditText usuario;
+    TextInputEditText usuario,contra;
     ConexionSQLiteHelper conn;
     boolean p;
     @Override
@@ -22,6 +22,7 @@ public class InicioSesion extends AppCompatActivity {
         setContentView(R.layout.activity_inicio_sesion);
         conn = new ConexionSQLiteHelper(this,"db",null,1);
         usuario = (TextInputEditText)findViewById(R.id.correo);
+        contra = (TextInputEditText)findViewById(R.id.contra);
 
     }
     public void iniciarsesion(View view){

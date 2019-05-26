@@ -3,7 +3,6 @@ package com.example.donaciones;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -16,18 +15,20 @@ import com.example.donaciones.utilidades.Utilidades;
 
 public class Registro extends AppCompatActivity {
 
-    TextInputEditText input1,input2,input3;
-    EditText edi;
+    TextInputEditText input1,input2,input3,input4;
+    EditText edi,edi1;
     Button bt;
     //inputText4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-        edi = (EditText)findViewById(R.id.editText2);
-        input1 = (TextInputEditText)findViewById(R.id.inputText1);
-        input2 = (TextInputEditText)findViewById(R.id.inputText2);
-        input3 = (TextInputEditText)findViewById(R.id.inputText3);
+        edi = (EditText)findViewById(R.id.edi);
+        edi1 = (EditText)findViewById(R.id.editText2);
+        input1 = (TextInputEditText)findViewById(R.id.input1);
+        input2 = (TextInputEditText)findViewById(R.id.input2);
+        input3 = (TextInputEditText)findViewById(R.id.input3);
+        input4 = (TextInputEditText)findViewById(R.id.input4);
         bt = (Button) findViewById(R.id.button5);
 
     }
