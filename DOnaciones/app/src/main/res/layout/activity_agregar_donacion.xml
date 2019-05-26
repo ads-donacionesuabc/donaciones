@@ -178,7 +178,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/botonDonar"
         android:layout_width="139dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -189,7 +189,7 @@
         android:layout_marginBottom="8dp"
         android:background="#0DA904"
         android:gravity="center"
-        android:onClick="onClick"
+        android:onClick="donar"
         android:text="Donar"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/nav_view"

@@ -1,9 +1,7 @@
 package com.example.donaciones;
 
 import android.content.ContentValues;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -28,7 +26,7 @@ public class Registro extends AppCompatActivity {
         input1 = (TextInputEditText)findViewById(R.id.inputText1);
         input2 = (TextInputEditText)findViewById(R.id.inputText2);
         input3 = (TextInputEditText)findViewById(R.id.inputText3);
-        bt = (Button) findViewById(R.id.button5);
+        bt = (Button) findViewById(R.id.botonDonar);
 
     }
 

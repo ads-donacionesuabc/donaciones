@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Busqueda extends AppCompatActivity {
 
@@ -49,6 +50,12 @@ public class Busqueda extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
+    }
+
+    public void verRifa(View view){
+        Intent next = new Intent(this, Rifa.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
     }
 
 }
