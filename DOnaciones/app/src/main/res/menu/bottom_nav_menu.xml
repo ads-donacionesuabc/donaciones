@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/navigation_Donaciones"
-        android:icon="@drawable/icon_donaciones"
+        android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_Donaciones" />
 
     <item
