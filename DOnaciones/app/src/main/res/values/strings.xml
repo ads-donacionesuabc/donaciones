@@ -5,4 +5,22 @@
     <string name="title_Cuenta">Cuenta</string>
     <string name="title_activity_busqueda">busqueda</string>
     <string name="title_activity_donaciones">Donaciones</string>
+
+    <string-array name="categorias_arrays">
+        <item>Libros</item>
+        <item>Ropa</item>
+        <item>Utiles escolares</item>
+        <item>Materiales de Lab</item>
+        <item>Aparatos Electrónicos</item>
+    </string-array>
+
+    <string-array name="campus_arrays">
+        <item>Tijuana</item>
+        <item>Ensenada</item>
+        <item>Tecate</item>
+        <item>Mexicali</item>
+        <item>Valle de las Palmas</item>
+    </string-array>
+
+
 </resources>
