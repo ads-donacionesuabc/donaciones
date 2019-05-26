@@ -7,7 +7,6 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 
 public class Donaciones extends AppCompatActivity {
 
@@ -20,15 +19,18 @@ public class Donaciones extends AppCompatActivity {
                 case R.id.navigation_Donaciones:
                     Intent intent = new Intent(Donaciones.this, Donaciones.class);
                     startActivity(intent);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.navigation_Busqueda:
                     Intent intent1 = new Intent(Donaciones.this, Busqueda.class);
                     startActivity(intent1);
+                    overridePendingTransition(0, 0);
                     //mTextMessage.setText("Buscar");
                     return true;
                 case R.id.navigation_Cuenta:
                     Intent intent2 = new Intent(Donaciones.this, Cuenta.class);
                     startActivity(intent2);
+                    overridePendingTransition(0, 0);
                     return true;
             }
             return false;
@@ -45,11 +47,6 @@ public class Donaciones extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
-    }
-
-    public void agregardonacion(View view){
-        Intent next = new Intent(this, AgregarDonacion.class);
-        startActivity(next);
     }
 
 }
