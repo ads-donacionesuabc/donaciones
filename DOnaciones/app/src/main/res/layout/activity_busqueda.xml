@@ -8,24 +8,24 @@
     tools:context=".Busqueda">
 
     <android.support.design.widget.AppBarLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay"
         tools:layout_conversion_absoluteHeight="56dp"
-        tools:layout_editor_absoluteY="0dp"
+        tools:layout_conversion_absoluteWidth="411dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_conversion_absoluteWidth="411dp">
+        tools:layout_editor_absoluteY="0dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             tools:layout_conversion_absoluteHeight="56dp"
-            tools:layout_editor_absoluteY="0dp"
+            tools:layout_conversion_absoluteWidth="411dp"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_conversion_absoluteWidth="411dp" />
+            tools:layout_editor_absoluteY="0dp" />
 
     </android.support.design.widget.AppBarLayout>
 
@@ -33,19 +33,45 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#0B1F02"
+        android:background="@color/colorPrimaryDark"
         tools:layout_conversion_absoluteHeight="731dp"
         tools:layout_conversion_absoluteWidth="411dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
 
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/windowBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:menu="@menu/bottom_nav_menu"
+            tools:layout_conversion_absoluteHeight="56dp"
+            tools:layout_conversion_absoluteWidth="411dp" />
+
         <LinearLayout
-            android:layout_width="418dp"
-            android:layout_height="129dp"
+            android:id="@+id/linearLayout5"
+            android:layout_width="401dp"
+            android:layout_height="136dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteX="-3dp"
-            tools:layout_editor_absoluteY="250dp"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.53"
             tools:ignore="MissingConstraints">
 
             <ImageButton
@@ -74,11 +100,21 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="465dp"
-            android:layout_height="124dp"
+            android:id="@+id/linearLayout8"
+            android:layout_width="410dp"
+            android:layout_height="133dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteX="5dp"
-            tools:layout_editor_absoluteY="384dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.749"
             tools:ignore="MissingConstraints">
 
             <ImageButton
@@ -101,24 +137,37 @@
                 android:id="@+id/imageButton9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_default"
                 app:srcCompat="@drawable/boton_rifa"
                 tools:layout_conversion_absoluteHeight="100dp"
                 tools:layout_conversion_absoluteWidth="105dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="403dp"
-            android:layout_height="142dp"
+            android:id="@+id/linearLayout7"
+            android:layout_width="410dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="416dp"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="522dp"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints">
 
             <ImageButton
                 android:id="@+id/imageButton7"
+                style="@android:style/Widget.Holo.ImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
+                android:background="@android:drawable/btn_default"
                 app:srcCompat="@drawable/boton_utilesescolares"
                 tools:layout_conversion_absoluteHeight="100dp"
                 tools:layout_conversion_absoluteWidth="105dp" />
@@ -127,7 +176,7 @@
                 android:id="@+id/imageButton6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
+                android:background="@android:drawable/btn_default"
                 app:srcCompat="@drawable/boton_ropa"
                 tools:layout_conversion_absoluteHeight="105dp"
                 tools:layout_conversion_absoluteWidth="105dp" />
@@ -136,39 +185,11 @@
                 android:id="@+id/imageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
+                android:background="@android:drawable/btn_default"
                 app:srcCompat="@drawable/boton_libros"
                 tools:layout_conversion_absoluteHeight="105dp"
                 tools:layout_conversion_absoluteWidth="105dp" />
         </LinearLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:layout_conversion_absoluteHeight="298dp"
-            tools:layout_conversion_absoluteWidth="388dp"
-            tools:layout_editor_absoluteX="7dp"
-            tools:layout_editor_absoluteY="-58dp"
-            tools:ignore="MissingConstraints">
-
-
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?android:attr/windowBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:menu="@menu/bottom_nav_menu"
-            tools:layout_conversion_absoluteHeight="56dp"
-            tools:layout_conversion_absoluteWidth="411dp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="675dp" />
 
     </android.support.constraint.ConstraintLayout>
 
