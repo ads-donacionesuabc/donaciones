@@ -26,18 +26,18 @@
         android:layout_height="match_parent"
         android:background="#0B1F02">
 
-        <FrameLayout
-            android:id="@+id/fragment_container"
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/nav_view"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="56dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></FrameLayout>
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
 
         <LinearLayout
-            android:id="@+id/linearLayout"
             android:layout_width="402dp"
             android:layout_height="576dp"
             android:layout_marginStart="8dp"
@@ -45,10 +45,13 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/nav_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.53">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -118,26 +121,26 @@
                     android:layout_height="wrap_content"
                     android:text="INFORMACION" />
 
-                <!--<ImageButton
+                <ImageButton
                     android:id="@+id/imageButton10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick=""
-                    app:srcCompat="@drawable/boton_sugerencias" />-->
+                    android:onClick="sugerencias"
+                    app:srcCompat="@drawable/boton_sugerencias" />
 
-                <!--<ImageButton
+                <ImageButton
                     android:id="@+id/boton_acerca_de"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick=""
-                    app:srcCompat="@drawable/boton_acercade" />-->
+                    android:onClick="acercaDe"
+                    app:srcCompat="@drawable/boton_acercade" />
 
-                <!--<ImageButton
+                <ImageButton
                     android:id="@+id/boton_preguntas_frecuentes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick=""
-                    app:srcCompat="@drawable/boton_preguntasfrecuentes" />-->
+                    android:onClick="preguntas"
+                    app:srcCompat="@drawable/boton_preguntasfrecuentes" />
             </LinearLayout>
         </LinearLayout>
 
