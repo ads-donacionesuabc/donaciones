@@ -5,15 +5,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class RegistroExitoso extends AppCompatActivity {
+import com.example.donaciones.R;
+
+public class Frase1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registroexitoso);
+        setContentView(R.layout.activity_frase1);
     }
-    public void continuar(View view){
-        Intent next = new Intent(this, Donaciones.class);
+
+    public void main(View view){
+        Intent next = new Intent(this, MainActivity.class);
         startActivity(next);
         overridePendingTransition(0, 0);
     }

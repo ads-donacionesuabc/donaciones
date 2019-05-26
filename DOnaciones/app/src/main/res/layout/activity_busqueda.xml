@@ -33,6 +33,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:background="@color/colorPrimaryDark"
         tools:layout_conversion_absoluteHeight="731dp"
         tools:layout_conversion_absoluteWidth="411dp"
@@ -54,141 +55,162 @@
             app:layout_constraintVertical_bias="1.0"
             app:menu="@menu/bottom_nav_menu"
             tools:layout_conversion_absoluteHeight="56dp"
-            tools:layout_conversion_absoluteWidth="411dp" />
+            tools:layout_conversion_absoluteWidth="411dp">
+
+        </android.support.design.widget.BottomNavigationView>
 
         <LinearLayout
-            android:id="@+id/linearLayout5"
-            android:layout_width="401dp"
-            android:layout_height="136dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/nav_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.53"
-            tools:ignore="MissingConstraints">
-
-            <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/boton_materiales"
-                tools:layout_conversion_absoluteHeight="100dp"
-                tools:layout_conversion_absoluteWidth="105dp" />
-
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/boton_reciente"
-                tools:layout_conversion_absoluteHeight="100dp"
-                tools:layout_conversion_absoluteWidth="105dp" />
-
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/boton_aparatos"
-                tools:layout_conversion_absoluteHeight="100dp"
-                tools:layout_conversion_absoluteWidth="105dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout8"
-            android:layout_width="410dp"
-            android:layout_height="133dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout5"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.749"
-            tools:ignore="MissingConstraints">
-
-            <ImageButton
-                android:id="@+id/imageButton8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/boton_solicitudes"
-                tools:layout_conversion_absoluteHeight="100dp"
-                tools:layout_conversion_absoluteWidth="105dp" />
-
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/boton_campus"
-                tools:layout_conversion_absoluteHeight="100dp"
-                tools:layout_conversion_absoluteWidth="105dp" />
-
-            <ImageButton
-                android:id="@+id/imageButton9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:drawable/btn_default"
-                app:srcCompat="@drawable/boton_rifa"
-                tools:layout_conversion_absoluteHeight="100dp"
-                tools:layout_conversion_absoluteWidth="105dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout7"
-            android:layout_width="410dp"
-            android:layout_height="134dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="416dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="@+id/nav_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout8"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.442"
+            tools:layout_editor_absoluteX="8dp"
             tools:ignore="MissingConstraints">
 
-            <ImageButton
-                android:id="@+id/imageButton7"
-                style="@android:style/Widget.Holo.ImageButton"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:drawable/btn_default"
-                app:srcCompat="@drawable/boton_utilesescolares"
-                tools:layout_conversion_absoluteHeight="100dp"
-                tools:layout_conversion_absoluteWidth="105dp" />
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
 
-            <ImageButton
-                android:id="@+id/imageButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:drawable/btn_default"
-                app:srcCompat="@drawable/boton_ropa"
-                tools:layout_conversion_absoluteHeight="105dp"
-                tools:layout_conversion_absoluteWidth="105dp" />
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/colorPrimary"
+                    app:srcCompat="@drawable/boton_libros"
+                    tools:layout_conversion_absoluteHeight="105dp"
+                    tools:layout_conversion_absoluteWidth="105dp" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="#FFFFFF"
+                    app:srcCompat="@drawable/boton_ropa"
+                    tools:layout_conversion_absoluteHeight="105dp"
+                    tools:layout_conversion_absoluteWidth="105dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton7"
+                    style="@android:style/Widget.Holo.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="#FFFFFF"
+                    app:srcCompat="@drawable/boton_utilesescolares"
+                    tools:layout_conversion_absoluteHeight="100dp"
+                    tools:layout_conversion_absoluteWidth="105dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:drawable/btn_default"
-                app:srcCompat="@drawable/boton_libros"
-                tools:layout_conversion_absoluteHeight="105dp"
-                tools:layout_conversion_absoluteWidth="105dp" />
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/colorPrimary"
+                    app:srcCompat="@drawable/boton_materiales"
+                    tools:layout_conversion_absoluteHeight="100dp"
+                    tools:layout_conversion_absoluteWidth="105dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/colorPrimary"
+                    app:srcCompat="@drawable/boton_aparatos"
+                    tools:layout_conversion_absoluteHeight="100dp"
+                    tools:layout_conversion_absoluteWidth="105dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/colorPrimary"
+                    app:srcCompat="@drawable/boton_reciente"
+                    tools:layout_conversion_absoluteHeight="100dp"
+                    tools:layout_conversion_absoluteWidth="105dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/colorPrimary"
+                    app:srcCompat="@drawable/boton_solicitudes"
+                    tools:layout_conversion_absoluteHeight="100dp"
+                    tools:layout_conversion_absoluteWidth="105dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/colorPrimary"
+                    app:srcCompat="@drawable/boton_campus"
+                    tools:layout_conversion_absoluteHeight="100dp"
+                    tools:layout_conversion_absoluteWidth="105dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/colorPrimary"
+                    android:onClick="verRifa"
+                    app:srcCompat="@drawable/boton_rifa"
+                    tools:layout_conversion_absoluteHeight="100dp"
+                    tools:layout_conversion_absoluteWidth="105dp" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>

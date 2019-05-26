@@ -52,15 +52,18 @@ public class Cuenta extends AppCompatActivity {
     public void acercaDe(View view){
         Intent next = new Intent(this, AcercaDe.class);
         startActivity(next);
+        overridePendingTransition(0, 0);
     }
 
     public void preguntas(View view){
         Intent next = new Intent(this, Preguntas.class);
         startActivity(next);
+        overridePendingTransition(0, 0);
     }
 
     public void sugerencias(View view){
         Intent next = new Intent(this, Sugerencias.class);
         startActivity(next);
+        overridePendingTransition(0, 0);
     }
 }

@@ -25,13 +25,15 @@ public class InicioSesion extends AppCompatActivity {
         contra = (TextInputEditText)findViewById(R.id.contra);
 
     }
-    public void iniciarsesion(View view){
+    public void iniciarsesion(View view)
+    {
         consulta();
     }
 
     public void registrate(View view){
         Intent next = new Intent(this, Registro.class);
         startActivity(next);
+        overridePendingTransition(0, 0);
     }
     public void consulta(){
         SQLiteDatabase db= conn.getReadableDatabase();
@@ -43,6 +45,7 @@ public class InicioSesion extends AppCompatActivity {
                 cursor.close();
                 Intent next = new Intent(this, Donaciones.class);
                 startActivity(next);
+                overridePendingTransition(0, 0);
            }
             else {
 

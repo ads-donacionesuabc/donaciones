@@ -5,15 +5,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class RegistroExitoso extends AppCompatActivity {
+public class Rifa extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registroexitoso);
+        setContentView(R.layout.activity_rifa);
     }
-    public void continuar(View view){
-        Intent next = new Intent(this, Donaciones.class);
+
+    public void consultarResultados(View view){
+        Intent next = new Intent(this, ConsultarResultadosRifa.class);
         startActivity(next);
         overridePendingTransition(0, 0);
     }

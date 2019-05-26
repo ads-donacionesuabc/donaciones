@@ -29,7 +29,7 @@ public class Registro extends AppCompatActivity {
         input2 = (TextInputEditText)findViewById(R.id.input2);
         input3 = (TextInputEditText)findViewById(R.id.input3);
         input4 = (TextInputEditText)findViewById(R.id.input4);
-        bt = (Button) findViewById(R.id.button5);
+        bt = (Button) findViewById(R.id.botonDonar);
 
     }
 
