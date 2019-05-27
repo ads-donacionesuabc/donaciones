@@ -66,6 +66,35 @@
             android:name=".CategoriaLibros"
             android:label="CategoriaLibros"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".CategoriaRopa"
+            android:label="CategoriaRopa"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".CategoriaUtiles"
+            android:label="CategoriaUtiles"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".CategoriaAparatos"
+            android:label="CategoriaAparatos"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".CategoriaLaboratorio"
+            android:label="CategoriaLaboratorio"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+
+        <activity
+            android:name=".CategoriaReciente"
+            android:label="Categoriareciente"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".CategoriaCampus"
+            android:label="CategoriaCampus"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".CategoriaSolicitudesPendientes"
+            android:label="CategoriaSolicitudesPendientes"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
 
         <activity
             android:name=".ConsultarResultadosRifa"

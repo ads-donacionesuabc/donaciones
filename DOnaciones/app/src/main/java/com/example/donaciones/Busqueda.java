@@ -63,6 +63,42 @@ public class Busqueda extends AppCompatActivity {
         startActivity(next);
         overridePendingTransition(0, 0);
     }
+    public void categoria_ropa(View view){
+        Intent next = new Intent(this, CategoriaRopa.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
+    }
+    public void categoria_utiles(View view){
+        Intent next = new Intent(this, CategoriaUtiles.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
+    }
+    public void categoria_laboratorio(View view){
+        Intent next = new Intent(this, CategoriaLaboratorio.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
+    }
+    public void categoria_aparatos(View view){
+        Intent next = new Intent(this, CategoriaAparatos.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
+    }
 
+    public void categoria_campus(View view){
+        Intent next = new Intent(this, CategoriaCampus.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
+    }
 
+    public void categoria_solicitudes_pendientes(View view){
+        Intent next = new Intent(this, CategoriaSolicitudesPendientes.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
+    }
+
+    public void categoria_reciente(View view){
+        Intent next = new Intent(this, CategoriaReciente.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
+    }
 }

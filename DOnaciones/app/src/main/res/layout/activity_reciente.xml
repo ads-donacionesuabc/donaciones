@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pantalla_categoria_libros">
+    android:background="@drawable/pantalla_reciente">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/nav_view"

@@ -100,6 +100,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
                     android:background="#FFFFFF"
+                    android:onClick="categoria_ropa"
                     app:srcCompat="@drawable/boton_ropa"
                     tools:layout_conversion_absoluteHeight="105dp"
                     tools:layout_conversion_absoluteWidth="105dp" />
@@ -112,6 +113,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
                     android:background="#FFFFFF"
+                    android:onClick="categoria_utiles"
                     app:srcCompat="@drawable/boton_utilesescolares"
                     tools:layout_conversion_absoluteHeight="100dp"
                     tools:layout_conversion_absoluteWidth="105dp" />
@@ -137,6 +139,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
                     android:background="@color/colorPrimary"
+                    android:onClick="categoria_laboratorio"
                     app:srcCompat="@drawable/boton_materiales"
                     tools:layout_conversion_absoluteHeight="100dp"
                     tools:layout_conversion_absoluteWidth="105dp" />
@@ -148,6 +151,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
                     android:background="@color/colorPrimary"
+                    android:onClick="categoria_aparatos"
                     app:srcCompat="@drawable/boton_aparatos"
                     tools:layout_conversion_absoluteHeight="100dp"
                     tools:layout_conversion_absoluteWidth="105dp" />
@@ -159,6 +163,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
                     android:background="@color/colorPrimary"
+                    android:onClick="categoria_reciente"
                     app:srcCompat="@drawable/boton_reciente"
                     tools:layout_conversion_absoluteHeight="100dp"
                     tools:layout_conversion_absoluteWidth="105dp" />
@@ -184,6 +189,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
                     android:background="@color/colorPrimary"
+                    android:onClick="categoria_solicitudes_pendientes"
                     app:srcCompat="@drawable/boton_solicitudes"
                     tools:layout_conversion_absoluteHeight="100dp"
                     tools:layout_conversion_absoluteWidth="105dp" />
@@ -195,6 +201,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
                     android:background="@color/colorPrimary"
+                    android:onClick="categoria_campus"
                     app:srcCompat="@drawable/boton_campus"
                     tools:layout_conversion_absoluteHeight="100dp"
                     tools:layout_conversion_absoluteWidth="105dp" />
