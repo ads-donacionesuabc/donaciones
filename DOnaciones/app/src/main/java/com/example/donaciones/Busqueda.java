@@ -50,7 +50,6 @@ public class Busqueda extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-
     }
 
     public void verRifa(View view){

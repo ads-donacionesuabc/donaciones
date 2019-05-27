@@ -3,7 +3,10 @@ package com.example.donaciones;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
@@ -12,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -23,10 +27,13 @@ public class AgreDonacion extends AppCompatActivity {
     TextInputEditText nombre,descripcion;
     Spinner campus,categoria;
 
+    ImageView item;
     ArrayList<String> listaDonaciones;
     ConexionSQLiteHelper conn;
     String Ncampus;
     String Ncategoria;
+    final static int PICK_IMAGE = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +42,9 @@ public class AgreDonacion extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         nombre = (TextInputEditText)findViewById(R.id.input1);
+
+        item = (ImageView) findViewById(R.id.img_prueba);
+
 
         descripcion = (TextInputEditText)findViewById(R.id.desc);
         campus = (Spinner) findViewById(R.id.spinner1);
@@ -85,7 +95,23 @@ public class AgreDonacion extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"Nombre:"+idResult,Toast.LENGTH_SHORT).show();
         db.close();
     }
-//TAMPOCO SE
+
+    /*******************************************************************************************
+     *******************************************************************************************
+     *******************************************************************************************
+     *******************************************************************************************/
+    public void selecFoto(View view){
+        Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        startActivityForResult(i,PICK_IMAGE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK && resultCode == PICK_IMAGE)
+            item.setImageURI(data.getData());
+    }
+
     public void onClick(View view){
         registrarDonacion();
         Intent intent = new Intent(AgreDonacion.this, Busqueda.class);
