@@ -8,11 +8,11 @@
 
     <ListView
         android:id="@+id/listViewDonas"
-        android:layout_width="416dp"
-        android:layout_height="529dp"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="136dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="413dp"
+        android:layout_height="528dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="136dp" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/nav_view"
