@@ -37,6 +37,7 @@ public class Busqueda extends AppCompatActivity {
                     return true;
             }
             return false;
+            //negativo
         }
     };
 

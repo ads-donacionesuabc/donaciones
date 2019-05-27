@@ -46,10 +46,10 @@
             android:layout_marginEnd="4dp"
             android:layout_marginRight="4dp"
             android:background="@drawable/roundedbutton"
+            android:onClick="next"
             android:text="+"
             android:textColor="#FFFFFF"
             android:textSize="36sp"
-            android:onClick="sigLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>

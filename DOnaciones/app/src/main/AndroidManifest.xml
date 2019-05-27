@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.donaciones">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,114 +12,107 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".AgreDonacion"
+            android:label="@string/title_activity_agre_donacion"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Donaciones"
             android:label="@string/title_activity_donaciones"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Busqueda"
             android:label="Busqueda"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Cuenta"
             android:label="Cuenta"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AcercaDe"
             android:label="AcercaDe"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Sugerencias"
             android:label="Sugerencias"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Preguntas"
             android:label="Preguntas"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InicioSesion"
             android:label="InicioSesion"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Registro"
             android:label="Registro"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RegistroExitoso"
             android:label="RegistroExitoso"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Frase1"
             android:label="Frase1"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Frase2"
             android:label="Frase2"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Rifa"
             android:label="Rifa"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CategoriaLibros"
             android:label="CategoriaLibros"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CategoriaRopa"
             android:label="CategoriaRopa"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CategoriaUtiles"
             android:label="CategoriaUtiles"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CategoriaAparatos"
             android:label="CategoriaAparatos"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CategoriaLaboratorio"
             android:label="CategoriaLaboratorio"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CategoriaReciente"
             android:label="Categoriareciente"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CategoriaCampus"
             android:label="CategoriaCampus"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Perfil"
             android:label="Perfil"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ArticulosSolicitados"
             android:label="ArticulosSolicitados"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CategoriaSolicitudesPendientes"
             android:label="CategoriaSolicitudesPendientes"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ConsultarResultadosRifa"
             android:label="ConsultarResultadosRifa"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

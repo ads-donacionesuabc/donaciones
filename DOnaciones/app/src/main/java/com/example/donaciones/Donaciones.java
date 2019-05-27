@@ -49,11 +49,16 @@ public class Donaciones extends AppCompatActivity {
     }
 
     protected void sigLayout(View view){
-        setContentView(R.layout.activity_agregar_donacion);
+        setContentView(R.layout.activity_agre_donacion);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    public void next(View view){
+        Intent intent = new Intent(Donaciones.this, AgreDonacion.class);
+        startActivity(intent);
     }
 
     public void regLayout(View view){
