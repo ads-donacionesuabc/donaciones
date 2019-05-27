@@ -84,13 +84,15 @@
                     android:id="@+id/imageButton11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/boton_perfil" />
+                    android:background="@drawable/boton_perfil"
+                    android:onClick="perfil" />
 
                 <ImageButton
                     android:id="@+id/imageButton12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/boton_articulos_solicitados" />
+                    android:background="@drawable/boton_articulos_solicitados"
+                    android:onClick="articulos_solicitados" />
 
                 <ImageButton
                     android:id="@+id/ImageButton13"

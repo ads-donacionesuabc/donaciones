@@ -91,6 +91,18 @@
             android:name=".CategoriaCampus"
             android:label="CategoriaCampus"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
+
+        <activity
+            android:name=".Perfil"
+            android:label="Perfil"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+
+        <activity
+            android:name=".ArticulosSolicitados"
+            android:label="ArticulosSolicitados"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+
+
         <activity
             android:name=".CategoriaSolicitudesPendientes"
             android:label="CategoriaSolicitudesPendientes"

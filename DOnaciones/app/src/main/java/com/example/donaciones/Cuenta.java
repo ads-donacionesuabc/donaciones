@@ -66,4 +66,16 @@ public class Cuenta extends AppCompatActivity {
         startActivity(next);
         overridePendingTransition(0, 0);
     }
+
+    public void perfil(View view){
+        Intent next = new Intent(this, Perfil.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
+    }
+
+    public void articulos_solicitados(View view){
+        Intent next = new Intent(this, ArticulosSolicitados.class);
+        startActivity(next);
+        overridePendingTransition(0, 0);
+    }
 }
