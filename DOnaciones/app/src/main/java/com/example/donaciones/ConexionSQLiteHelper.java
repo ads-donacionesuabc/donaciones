@@ -17,7 +17,9 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
     //Metodo crea tablas
     @Override
     public void onCreate(SQLiteDatabase db) {
-    db.execSQL(Utilidades.TABLA_USUARIO);
+
+        db.execSQL(Utilidades.TABLA_USUARIO);
+        db.execSQL(Utilidades.TABLA_DONACION);
     }
     //Metodo verifica si ya hay version antigua de base de datos
     @Override
