@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+        <string-array name="combo_campus" >
+            <item>Tijuana</item>
+            <item>Mexicali</item>
+            <item>Tecate</item>
+            <item>Ensenada</item>
+            <item>Rosarito</item>
+        </string-array>
+        <string-array name="combo_categoria" >
+            <item>Libros</item>
+            <item>Aparatos Electr</item>
+            <item>Ropa</item>
+            <item>Materiales de Lab</item>
+            <item>Utiles escolatres</item>
+        </string-array>
+
+</resources>
