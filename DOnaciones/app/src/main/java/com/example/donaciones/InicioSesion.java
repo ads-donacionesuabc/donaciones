@@ -1,5 +1,6 @@
 package com.example.donaciones;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -37,10 +38,19 @@ public class InicioSesion extends AppCompatActivity {
     }
     public void consulta(){
         SQLiteDatabase db= conn.getReadableDatabase();
+
+
+
+        ContentValues values = new ContentValues();
+
+
         String[] parametros={usuario.getText().toString()};
         String[] campo = {Utilidades.correo};
+       // String[] campo1 ={Utilidades.donador};
 
             Cursor cursor = db.query("usuarios",campo,"correo=?"/*Utilidades.correo+"=?"*/,parametros,null,null,null);
+           /* campo1=campo;
+            values.put(Utilidades.donador,campo1.toString());*/
             if (cursor.moveToFirst()) {
                 cursor.close();
                 Intent next = new Intent(this, Donaciones.class);

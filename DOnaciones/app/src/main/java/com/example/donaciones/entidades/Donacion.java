@@ -10,7 +10,8 @@ public class Donacion implements Serializable {
     private String campus;
     private String categoria;
     private String descripcion;
-    //private Image
+    private String donador;
+
     public Donacion(String nombred, String campus, String categoria, String descripcion) {
         this.nombred = nombred;
         this.campus = campus;
@@ -22,7 +23,6 @@ public class Donacion implements Serializable {
     public Donacion() {
 
     }
-//NO SE DAFADFADF
 
     public String getNombred() {
         return nombred;
@@ -55,6 +55,7 @@ public class Donacion implements Serializable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
 
 }
 
