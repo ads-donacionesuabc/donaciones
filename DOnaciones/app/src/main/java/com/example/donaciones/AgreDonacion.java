@@ -3,6 +3,8 @@ package com.example.donaciones;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -15,24 +17,27 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.donaciones.utilidades.Utilidades;
 
 import java.util.ArrayList;
 
-public class AgreDonacion extends AppCompatActivity {
+public class AgreDonacion extends AppCompatActivity implements View.OnClickListener {
     TextInputEditText nombre,descripcion;
     Spinner campus,categoria;
 
-    ImageView item;
     ArrayList<String> listaDonaciones;
     ConexionSQLiteHelper conn;
     String Ncampus;
     String Ncategoria;
-    final static int PICK_IMAGE = 0;
+    Button donar;
+    final static int PICK_IMAGE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +48,8 @@ public class AgreDonacion extends AppCompatActivity {
 
         nombre = (TextInputEditText)findViewById(R.id.input1);
 
-        item = (ImageView) findViewById(R.id.img_prueba);
-
+        donar = (Button) findViewById(R.id.botonDonar);
+        donar.setOnClickListener(this);
 
         descripcion = (TextInputEditText)findViewById(R.id.desc);
         campus = (Spinner) findViewById(R.id.spinner1);
@@ -108,14 +113,33 @@ public class AgreDonacion extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode == RESULT_OK && resultCode == PICK_IMAGE)
-            item.setImageURI(data.getData());
+        TextView nFoto = (TextView) findViewById(R.id.nombre_foto);
+        if((resultCode == PICK_IMAGE || resultCode == RESULT_OK) && data != null){
+            Uri seleccion = data.getData();
+            //getPath regresa la direccion de la imagen que se selecciono.
+            nFoto.setText(seleccion.getPath());
+        }
+        else{
+            nFoto.setText("No funciono.");
+        }
+
     }
 
-    public void onClick(View view){
+
+    public void cambio(View view){
         registrarDonacion();
         Intent intent = new Intent(AgreDonacion.this, Busqueda.class);
         startActivity(intent);
     }
+
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.botonDonar){
+            Intent galeria = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(galeria, PICK_IMAGE);
+        }
+    }
+
 
 }

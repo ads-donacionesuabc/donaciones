@@ -91,7 +91,7 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/nombre_foto"
                     android:layout_width="18dp"
                     android:layout_height="36dp"
                     android:layout_weight="1"
@@ -196,7 +196,7 @@
             android:layout_marginBottom="8dp"
             android:background="#0DA904"
             android:gravity="center"
-            android:onClick="onClick"
+            android:onClick="cambio"
             android:text="Donar"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/nav_view"
@@ -205,24 +205,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.854" />
-
-        <ImageView
-            android:id="@+id/img_prueba"
-            android:layout_width="84dp"
-            android:layout_height="66dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/nav_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.157"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.733"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     </android.support.constraint.ConstraintLayout>
 
