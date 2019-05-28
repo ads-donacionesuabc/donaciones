@@ -18,5 +18,5 @@ public class Utilidades {
     public static final String campus = "campus";
     public static final String categoria = "categoria";
     //public static final String donador = "donador";
-    public static final String TABLA_DONACION="create table "+tdonacion+"("+nombre+" TEXT,"+ categoria+" TEXT,"+descripcion+" TEXT,"+campus+" TEXT)";
+    public static final String TABLA_DONACION="create table "+tdonacion+"("+nombred+" TEXT,"+ categoria+" TEXT,"+descripcion+" TEXT,"+campus+" TEXT)";
 }

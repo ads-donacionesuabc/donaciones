@@ -91,7 +91,7 @@ public class AgreDonacion extends AppCompatActivity {
         values.put(Utilidades.campus,Ncampus);
         values.put(Utilidades.categoria,Ncategoria);
 
-        Long idResult = db.insert(Utilidades.tdonacion,Utilidades.nombre,values);
+        Long idResult = db.insert(Utilidades.tdonacion,Utilidades.nombred,values);
         Toast.makeText(getApplicationContext(),"Nombre:"+idResult,Toast.LENGTH_SHORT).show();
         db.close();
     }
