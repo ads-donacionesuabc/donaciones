@@ -101,10 +101,10 @@
                 <Button
                     android:id="@+id/button4"
                     android:layout_width="4dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="37dp"
                     android:layout_weight="1"
-                    android:text="Button"
-                    android:onClick="selecFoto"/>
+                    android:onClick="selecFoto"
+                    android:text="Button" />
             </LinearLayout>
 
             <LinearLayout

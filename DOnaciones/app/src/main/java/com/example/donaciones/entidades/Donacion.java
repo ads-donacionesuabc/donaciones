@@ -12,12 +12,12 @@ public class Donacion implements Serializable {
     private String descripcion;
     private String donador;
 
-    public Donacion(String nombred, String campus, String categoria, String descripcion) {
+    public Donacion(String nombred, String campus, String categoria, String descripcion, String donador) {
         this.nombred = nombred;
         this.campus = campus;
         this.categoria = categoria;
         this.descripcion = descripcion;
-
+        this.donador = donador;
     }
 
     public Donacion() {
@@ -56,6 +56,12 @@ public class Donacion implements Serializable {
         this.descripcion = descripcion;
     }
 
+    public String getDonador() {
+        return donador;
+    }
 
+    public void setDonador(String donador) {
+        this.donador = donador;
+    }
 }
 

@@ -2,15 +2,12 @@ package com.example.donaciones;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,12 +15,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.donaciones.entidades.Usuario;
 import com.example.donaciones.utilidades.Utilidades;
 
 import java.util.ArrayList;
@@ -32,11 +28,14 @@ public class AgreDonacion extends AppCompatActivity implements View.OnClickListe
     TextInputEditText nombre,descripcion;
     Spinner campus,categoria;
 
-    ArrayList<String> listaDonaciones;
+    ArrayList<String> listaInformacion;
+    ArrayList<Usuario> listaUsuarios;
     ConexionSQLiteHelper conn;
     String Ncampus;
     String Ncategoria;
-    Button donar;
+    Button donar,imag;
+    String nom;
+    InicioSesion p = new InicioSesion();
     final static int PICK_IMAGE = 1;
 
     @Override
@@ -49,7 +48,8 @@ public class AgreDonacion extends AppCompatActivity implements View.OnClickListe
         nombre = (TextInputEditText)findViewById(R.id.input1);
 
         donar = (Button) findViewById(R.id.botonDonar);
-        donar.setOnClickListener(this);
+        imag = (Button) findViewById(R.id.button4);
+        imag.setOnClickListener(this);
 
         descripcion = (TextInputEditText)findViewById(R.id.desc);
         campus = (Spinner) findViewById(R.id.spinner1);
@@ -87,6 +87,34 @@ public class AgreDonacion extends AppCompatActivity implements View.OnClickListe
 
 
     }
+    private void consultaUsuarios(){
+        SQLiteDatabase db= conn.getReadableDatabase();
+        Usuario libro=null;
+        InicioSesion p = new InicioSesion();
+        listaUsuarios= new ArrayList<Usuario>();                          //Nombre del correo
+        Cursor cursor=db.rawQuery("SELECT * FROM usuarios where correo =p.getCorreo",null);
+        if(cursor.moveToFirst()){
+            nom=cursor.getString(0);
+        }
+     /*  while(cursor.moveToNext()){
+            libro=new Usuario();
+            libro.setNombre(cursor.getString(0));
+            nom = libro.getNombre();
+            listaUsuarios.add(libro);
+        }
+        obtenerLista();*/
+
+    }
+
+   /* private void obtenerLista(){
+       listaInformacion=new ArrayList<String>();
+        //listaDonaciones.add()
+        for(int i=0; i<listaUsuarios.size(); i++){
+            listaInformacion.add(
+                     listaUsuarios.get(i).getNombre());
+        }
+    }*/
+
     public void registrarDonacion(){
         ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this, "db",null,1);
         SQLiteDatabase db = conn.getWritableDatabase();
@@ -95,9 +123,11 @@ public class AgreDonacion extends AppCompatActivity implements View.OnClickListe
         values.put(Utilidades.descripcion,descripcion.getText().toString());
         values.put(Utilidades.campus,Ncampus);
         values.put(Utilidades.categoria,Ncategoria);
+        values.put(Utilidades.donador,"Pepe");///"nom" Nombre del donador
 
         Long idResult = db.insert(Utilidades.tdonacion,Utilidades.nombred,values);
-        Toast.makeText(getApplicationContext(),"Nombre:"+idResult,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"Nombre:"+idResult,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Nombre:"+p.getCorreo(),Toast.LENGTH_SHORT).show();
         db.close();
     }
 
@@ -126,20 +156,20 @@ public class AgreDonacion extends AppCompatActivity implements View.OnClickListe
     }
 
 
+
+
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.button4){
+            Intent galeria = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(galeria, PICK_IMAGE);
+        }
+    }
     public void cambio(View view){
         registrarDonacion();
         Intent intent = new Intent(AgreDonacion.this, Busqueda.class);
         startActivity(intent);
     }
-
-
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.botonDonar){
-            Intent galeria = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            startActivityForResult(galeria, PICK_IMAGE);
-        }
-    }
-
 
 }

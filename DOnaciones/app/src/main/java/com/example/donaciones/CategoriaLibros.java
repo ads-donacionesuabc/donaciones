@@ -51,6 +51,7 @@ public class CategoriaLibros extends AppCompatActivity {
             libro.setCategoria(cursor.getString(1));
             libro.setDescripcion(cursor.getString(2));
             libro.setCampus(cursor.getString(3));
+            libro.setDonador(cursor.getString(4));
 
             listaDonaciones.add(libro);
         }
@@ -62,7 +63,7 @@ public class CategoriaLibros extends AppCompatActivity {
         listaInformacion=new ArrayList<String>();
         //listaDonaciones.add()
         for(int i=0; i<listaDonaciones.size(); i++){
-            listaInformacion.add(listaDonaciones.get(i).getDescripcion()+" - "
+            listaInformacion.add(listaDonaciones.get(i).getDonador()+" - "
                     + listaDonaciones.get(i).getNombred()+" - "+listaDonaciones.get(i).getCategoria());
         }
     }
@@ -94,7 +95,8 @@ public class CategoriaLibros extends AppCompatActivity {
 
             //imageView.setImageResource(imagenes[i]);
             textView_articulo.setText(listaDonaciones.get(i).getNombred());
-            textView_campus.setText(listaDonaciones.get(i).getCampus());
+           // textView_campus.setText(listaDonaciones.get(i).getCampus());
+            textView_campus.setText(listaDonaciones.get(i).getDonador());
 
             return view;
         }

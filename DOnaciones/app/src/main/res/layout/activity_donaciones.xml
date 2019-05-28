@@ -25,6 +25,14 @@
         android:layout_height="match_parent"
         android:background="#0B1F02">
 
+        <ListView
+            android:id="@+id/listViewDonas"
+            android:layout_width="413dp"
+            android:layout_height="558dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="116dp"
+            tools:ignore="MissingConstraints" />
+
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/nav_view"
             android:layout_width="0dp"
