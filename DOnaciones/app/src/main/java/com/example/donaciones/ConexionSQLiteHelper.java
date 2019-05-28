@@ -20,7 +20,7 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
 
         db.execSQL(Utilidades.TABLA_USUARIO);
         db.execSQL(Utilidades.TABLA_DONACION);
-        db.execSQL(Utilidades.TABLA_SOLICITUD);
+       
     }
     //Metodo verifica si ya hay version antigua de base de datos
     @Override

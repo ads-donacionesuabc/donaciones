@@ -22,7 +22,5 @@ public class Utilidades {
 
 
 
-    public static final String tsolicitud = "solicitudes";
-    public static final String nombreS = "nombreS";
-    public static final String TABLA_SOLICITUD="create table "+tsolicitud+"("+nombreS+" TEXT,"+nombred+" TEXT,"+nombre+" TEXT)";
+
 }

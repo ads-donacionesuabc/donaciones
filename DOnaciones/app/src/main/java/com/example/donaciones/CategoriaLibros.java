@@ -95,8 +95,7 @@ public class CategoriaLibros extends AppCompatActivity {
 
             //imageView.setImageResource(imagenes[i]);
             textView_articulo.setText(listaDonaciones.get(i).getNombred());
-           // textView_campus.setText(listaDonaciones.get(i).getCampus());
-            textView_campus.setText(listaDonaciones.get(i).getDonador());
+            textView_campus.setText(listaDonaciones.get(i).getCampus());
 
             return view;
         }

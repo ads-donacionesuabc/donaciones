@@ -17,7 +17,6 @@ public class InicioSesion extends AppCompatActivity {
     TextInputEditText usuario,contra;
     ConexionSQLiteHelper conn;
     boolean p;
-    String correo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,12 +48,9 @@ public class InicioSesion extends AppCompatActivity {
         String[] campo = {Utilidades.correo};
 
 
-            Cursor cursor = db.query("usuarios",campo,"correo=?",parametros,null,null,null);
+            Cursor cursor = db.query("usuarios",campo,"correo=?"/*Utilidades.correo+"=?"*/,parametros,null,null,null);
 
             if (cursor.moveToFirst()) {
-                correo=cursor.getString(0);// Valor de correo
-                //correo = campo.toString();
-              //  correo = campo[0];
                 cursor.close();
                 Intent next = new Intent(this, Donaciones.class);
                 startActivity(next);
@@ -65,9 +61,5 @@ public class InicioSesion extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Usuario no identificado",Toast.LENGTH_LONG).show();}
 
 
-    }
-
-    public String getCorreo() {
-        return correo;
     }
 }

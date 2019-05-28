@@ -96,8 +96,7 @@ public class Donaciones extends AppCompatActivity {
         SQLiteDatabase db= conn.getReadableDatabase();
         Donacion libro=null;
         listaDonaciones= new ArrayList<Donacion>();
-                                                                        //Aquí iría
-        Cursor cursor=db.rawQuery("SELECT * FROM donaciones where donador ='Pepe'",null);
+        Cursor cursor=db.rawQuery("SELECT * FROM donaciones where categoria ='Aparatos Electronicos'",null);
 
         while(cursor.moveToNext()){
             libro=new Donacion();

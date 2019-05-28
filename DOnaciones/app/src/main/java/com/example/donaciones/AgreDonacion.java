@@ -35,7 +35,6 @@ public class AgreDonacion extends AppCompatActivity implements View.OnClickListe
     String Ncategoria;
     Button donar,imag;
     String nom;
-    InicioSesion p = new InicioSesion();
     final static int PICK_IMAGE = 1;
 
     @Override
@@ -87,33 +86,7 @@ public class AgreDonacion extends AppCompatActivity implements View.OnClickListe
 
 
     }
-    private void consultaUsuarios(){
-        SQLiteDatabase db= conn.getReadableDatabase();
-        Usuario libro=null;
-        InicioSesion p = new InicioSesion();
-        listaUsuarios= new ArrayList<Usuario>();                          //Nombre del correo
-        Cursor cursor=db.rawQuery("SELECT * FROM usuarios where correo =p.getCorreo",null);
-        if(cursor.moveToFirst()){
-            nom=cursor.getString(0);
-        }
-     /*  while(cursor.moveToNext()){
-            libro=new Usuario();
-            libro.setNombre(cursor.getString(0));
-            nom = libro.getNombre();
-            listaUsuarios.add(libro);
-        }
-        obtenerLista();*/
 
-    }
-
-   /* private void obtenerLista(){
-       listaInformacion=new ArrayList<String>();
-        //listaDonaciones.add()
-        for(int i=0; i<listaUsuarios.size(); i++){
-            listaInformacion.add(
-                     listaUsuarios.get(i).getNombre());
-        }
-    }*/
 
     public void registrarDonacion(){
         ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this, "db",null,1);
@@ -123,11 +96,11 @@ public class AgreDonacion extends AppCompatActivity implements View.OnClickListe
         values.put(Utilidades.descripcion,descripcion.getText().toString());
         values.put(Utilidades.campus,Ncampus);
         values.put(Utilidades.categoria,Ncategoria);
-        values.put(Utilidades.donador,"Pepe");///"nom" Nombre del donador
+        values.put(Utilidades.donador,nom);
 
         Long idResult = db.insert(Utilidades.tdonacion,Utilidades.nombred,values);
-        //Toast.makeText(getApplicationContext(),"Nombre:"+idResult,Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(),"Nombre:"+p.getCorreo(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Nombre:"+idResult,Toast.LENGTH_SHORT).show();
+
         db.close();
     }
 
